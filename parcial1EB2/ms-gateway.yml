@@ -1,10 +1,8 @@
 # Configuraciones del servidor
 server:
   port: 8090
-  
+# Configuraciones de spring cloud
 spring:
-  application:
-    name: ms-gateway
   security:
     oauth2:
       client:
@@ -28,16 +26,12 @@ spring:
           uri: lb://ms-bills
 #          uri: http://localhost:8086
           predicates:
-           - Path=/api/v1/bills/**
+            - Path= /api/v1/**
           filters:
             - StripPrefix=2
-        - id: ms-users
-          uri: http://localhost:8084
-          predicates:
-           - Path=/api/v1/users/**
-          filters:
-            - StripPrefix=2
-
+  application:
+    name: ms-gateway
+# Configuraciones de eureka
 eureka:
   instance:
     hostname: localhost
