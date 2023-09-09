@@ -1,6 +1,7 @@
-server:
-  port: ${PORT:0}
-#  port: 8084
+server: 
+  port: 8084
+  servlet:
+    context-path:
 
 spring:
   application:
@@ -10,18 +11,19 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8080/realms/CodeMastersElearning
-      # client:
-      #   provider:
-      #     keycloak-provider:
-      #       issuer-uri: http://localhost:8080/realms/CodeMastersElearning
-      #   registration:
-      #     keycloak-provider:
-      #       client-id: ms-users-client
-      #       client-secret: eSY1iQNfIhocDMQrkG7sFJvbhRLggvnG
-      #       scope:
-      #         - openid
-      #       authorization-grant-type: authorization_code
-      #       redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
+      client:
+        provider:
+          keycloak-provider:
+            issuer-uri: http://localhost:8080/realms/CodeMastersElearning
+        registration:
+          keycloak-provider:
+            client-id: ms-users-client
+            client-secret: eSY1iQNfIhocDMQrkG7sFJvbhRLggvnG
+            scope:
+              - openid
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8084/login/oauth2/code/keycloak
+            
 dh:
  keycloak:
    serverUrl: http://localhost:8080
