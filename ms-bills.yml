@@ -1,6 +1,6 @@
 server:
-  port: ${PORT:0}
-#  port: 8086
+#  port: ${PORT:0}
+  port: 8086
   servlet:
     context-path:
 spring:

@@ -25,8 +25,8 @@ spring:
         - TokenRelay
       routes:
         - id: ms-bills
-          uri: lb://ms-bills
-#          uri: http://localhost:8086
+#           uri: lb://ms-bills
+          uri: http://localhost:8086
           predicates:
            - Path=/api/v1/bills/**
           filters:
