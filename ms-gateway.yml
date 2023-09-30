@@ -9,10 +9,10 @@ spring:
     oauth2:
       client:
         provider:
-          keycloak-provider:
+          keycloak:
             issuer-uri: http://localhost:8080/realms/CodeMastersElearning
         registration:
-          keycloak-provider:
+          keycloak:
             client-id: api-gateway-client
             client-secret: QxYPDHeCiRrtE2DmvI3tyJo30JedLRoU
             scope:
