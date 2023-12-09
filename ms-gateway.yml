@@ -14,7 +14,7 @@ spring:
         registration:
           keycloak:
             client-id: api-gateway-client
-            client-secret: QxYPDHeCiRrtE2DmvI3tyJo30JedLRoU
+            client-secret: h8NtpokmQ9O8MaMLLZVo4EdqEr8UzKTr
             scope:
               - openid
               - providersScope
