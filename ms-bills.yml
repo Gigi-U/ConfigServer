@@ -29,7 +29,7 @@ spring:
   h2:
     console:
       enabled: true
-      path: http://192.168.0.3:8082/ # /h2-console
+      path: /h2-console # http://192.168.0.3:8082/ 
       settings:
         web-allow-others: true
 
